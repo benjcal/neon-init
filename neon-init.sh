@@ -5,7 +5,7 @@ then
     echo "package.json found"
 else
     echo "package.json not found"
-    echo "the script needs to be run on the root of a node.js project"
+    echo "the script needs to be run on the root of the node.js project"
     exit 1
 fi
 

@@ -16,22 +16,22 @@ then
     exit 1
 fi
 
-echo -e "\e[32m\e[1mMaking directory...\n"
+echo -e "\e[32m\e[1mMaking directory...\e[0m\n"
 mkdir -p native/src
 
-echo -e "\e[32m\e[1mDownloading files...\n"
+echo -e "\e[32m\e[1mDownloading files...\e[0m\n"
 # download template files
 echo -e "\e[0m"
 curl -o native/Cargo.toml https://raw.githubusercontent.com/benjcal/neon-init/master/templates/Cargo.toml
 curl -o native/build.rs https://raw.githubusercontent.com/benjcal/neon-init/master/templates/build.rs
 curl -o native/src/lib.rs https://raw.githubusercontent.com/benjcal/neon-init/master/templates/lib.rs
 
-echo -e "\e[32m\e[1mInstalling npm packages...\n"
-echo -e "\e[0m"
+echo -e "\e[32m\e[1mInstalling npm packages...\e[0m\n"
+
 npm install neon-cli
 
 echo -e "\e[32m\e[1mAdding build script to package.json...\n"
-echo -e "\e[0m"
+
 # add neon-build to package.json
 node -e "const fs = require('fs'); \
 let p = fs.readFileSync('package.json', 'utf8'); \
@@ -40,6 +40,5 @@ Object.assign(pp.scripts, {'neon-build': 'neon build'}); \
 fs.writeFileSync('package.json~', p); \
 fs.writeFileSync('package.json', JSON.stringify(pp, null, 2));"
 
-echo -e "\e[32m\e[1mHappy hacking!"
+echo -e "\e[32m\e[1mHappy hacking!\e[0m"
 
-echo -e "\e[0m"

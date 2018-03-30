@@ -4,7 +4,7 @@ Simple script to add neon rust bindings to an existing node app
 
 ## Installation
 
-`curl https://raw.githubusercontent.com/benjcal/neon-init/master/neon-init.sh -s | sh`
+`curl https://raw.githubusercontent.com/benjcal/neon-init/master/neon-init.sh -s | bash`
 
 **warning**:
 Right now the script is a little aggresive, it creates `native/` on the root

@@ -26,5 +26,7 @@ console.log(addon.hello())
 Enjoy!
 
 [Neon Documentation](https://api.neon-bindings.com/neon).
+
 [Rust Documentation](https://doc.rust-lang.org).
-[Node Documentation](https://nodejs.org/api)
+
+[Node Documentation](https://nodejs.org/api).

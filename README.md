@@ -7,16 +7,14 @@ Simple script to add neon rust bindings to an existing node app
 `curl https://raw.githubusercontent.com/benjcal/neon-init/master/neon-init.sh -s | sh`
 
 **warning**:
-Right now the script is a little aggresive without asking, it creates `native/` on the root
-of the application and modifies `package.json` to add an entry for `npm run node-build`
+Right now the script is a little aggresive, it creates `native/` on the root
+of the application and modifies `package.json` without asking.
 
 ## Usage
 
 Your Rust source code is at `native/src/lib.rs`
 
 Run `npm run neon-build` to compile Rust scource code
-
-Read Neon documentation [here](https://api.neon-bindings.com/neon/index.html).
 
 Sample JS file:
 ```js
@@ -26,3 +24,7 @@ console.log(addon.hello())
 ```
 
 Enjoy!
+
+[Neon Documentation](https://api.neon-bindings.com/neon).
+[Rust Documentation](https://doc.rust-lang.org).
+[Node Documentation](https://nodejs.org/api)

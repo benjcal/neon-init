@@ -23,10 +23,10 @@ var addon = require('./native')
 console.log(addon.hello())
 ```
 
-Enjoy!
+### Enjoy! 😃
 
-[Neon Documentation](https://api.neon-bindings.com/neon).
+[Neon Documentation](https://api.neon-bindings.com/neon)
 
-[Rust Documentation](https://doc.rust-lang.org).
+[Rust Documentation](https://doc.rust-lang.org)
 
-[Node Documentation](https://nodejs.org/api).
+[Node Documentation](https://nodejs.org/api)

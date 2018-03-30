@@ -1,5 +1,12 @@
 #!/bin/sh
 
+if [ -f package.json ]
+then
+    echo "package.json not found"
+    echo "the script needs to be run on the root of a node.js project"
+    exit 1
+fi
+
 # make "native" folder
 if [ -d native ]
 then
@@ -13,13 +20,6 @@ mkdir -p native/src
 curl -o native/Cargo.toml https://raw.githubusercontent.com/benjcal/neon-init/master/templates/Cargo.toml
 curl -o native/build.rs https://raw.githubusercontent.com/benjcal/neon-init/master/templates/build.rs
 curl -o native/src/lib.rs https://raw.githubusercontent.com/benjcal/neon-init/master/templates/src/lib.rs
-
-if [ -f package.json ]
-then
-    echo "package.json not found"
-    echo "generate one using 'npm init'"
-    exit 1
-fi
 
 npm install neon-cli
 

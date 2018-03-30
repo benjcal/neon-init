@@ -12,13 +12,13 @@ of the application and modifies `package.json` without asking.
 
 ## Usage
 
-Your Rust source code is at `native/src/lib.rs`
+The Rust source code is at `native/src/lib.rs`
 
-Run `npm run neon-build` to compile Rust scource code
+Run `npm run neon-build` to compile the Rust scource code
 
 Sample JS file:
 ```js
-var addon = require('./native')
+const addon = require('./native')
 
 console.log(addon.hello())
 ```

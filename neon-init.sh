@@ -2,9 +2,9 @@
 
 if [ -e package.json ]
 then
-    echo "package.json found"
+    echo "\n'package.json' found\n"
 else
-    echo "package.json not found"
+    echo "\nError: 'package.json' not found"
     echo "the script needs to be run on the root of the node.js project"
     exit 1
 fi
@@ -12,7 +12,7 @@ fi
 # make "native" folder
 if [ -d native ]
 then
-    echo "Error: 'native' folder exist"
+    echo "\nError: 'native' folder exist"
     exit 1
 fi
 
@@ -25,6 +25,7 @@ curl -o native/src/lib.rs https://raw.githubusercontent.com/benjcal/neon-init/ma
 
 npm install neon-cli
 
+echo "\nAdding build script to package.json\n"
 # add neon-build to package.json
 node -e "const fs = require('fs'); \
 let p = fs.readFileSync('package.json', 'utf8'); \
@@ -32,3 +33,5 @@ let pp = JSON.parse(p); \
 Object.assign(pp.scripts, {'neon-build': 'neon build'}); \
 fs.writeFileSync('package.json~', p); \
 fs.writeFileSync('package.json', JSON.stringify(pp, null, 2));"
+
+echo "\nHappy hacking!"

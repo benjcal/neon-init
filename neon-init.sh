@@ -19,9 +19,8 @@ fi
 echo -e "\e[32m\e[1mMaking directory...\e[0m\n"
 mkdir -p native/src
 
-echo -e "\e[32m\e[1mDownloading files...\e[0m\n"
+echo -e "\e[32m\e[1mDownloading files...\e[0m"
 # download template files
-echo -e "\e[0m"
 curl -o native/Cargo.toml https://raw.githubusercontent.com/benjcal/neon-init/master/templates/Cargo.toml
 curl -o native/build.rs https://raw.githubusercontent.com/benjcal/neon-init/master/templates/build.rs
 curl -o native/src/lib.rs https://raw.githubusercontent.com/benjcal/neon-init/master/templates/lib.rs

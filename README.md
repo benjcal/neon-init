@@ -23,6 +23,8 @@ const addon = require('./native')
 console.log(addon.hello())
 ```
 
+The script is simple and there's not a lot of things that can go wrong, but still use this under your own responsability and always `git commit` before!
+
 ### Enjoy! 😃
 
 [Neon Documentation](https://api.neon-bindings.com/neon)

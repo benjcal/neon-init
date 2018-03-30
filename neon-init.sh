@@ -21,7 +21,7 @@ mkdir -p native/src
 # download template files
 curl -o native/Cargo.toml https://raw.githubusercontent.com/benjcal/neon-init/master/templates/Cargo.toml
 curl -o native/build.rs https://raw.githubusercontent.com/benjcal/neon-init/master/templates/build.rs
-curl -o native/src/lib.rs https://raw.githubusercontent.com/benjcal/neon-init/master/templates/src/lib.rs
+curl -o native/src/lib.rs https://raw.githubusercontent.com/benjcal/neon-init/master/templates/lib.rs
 
 npm install neon-cli
 

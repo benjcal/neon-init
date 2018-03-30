@@ -2,7 +2,7 @@
 
 if [ -e package.json ]
 then
-    echo -e "'package.json' found\n"
+    echo -e "\e[32m\e[1m'package.json' found\e[0m\n"
 else
     echo -e "\nError: 'package.json' not found"
     echo -e "the script needs to be run on the root of the node.js project"
